@@ -1,0 +1,38 @@
+.site {
+  background-color: $gray-lighter;
+  padding-top: (($grid-gutter-width / 2));
+  padding-bottom: 0;
+}
+
+.alleno-page {
+  padding: $grid-gutter-width;
+  background-color: #fff;
+  @include drop-shadow-std();
+}
+
+.site-branding {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: $grid-gutter-width;
+
+  .custom-logo-link img {
+    max-width: 230px;
+
+    @media (min-width: $grid-float-breakpoint) {
+      max-width: 100%;
+    }
+  }
+}
+
+.main-navigation {
+  text-align: center;
+  border-top: 1px solid $orange;
+  border-bottom: 1px solid $orange;
+  padding: $padding-large-vertical 0;
+  line-height: 1;
+  margin-bottom: $grid-gutter-width;
+
+  ul.alleno-nav {
+    display: inline-block;
+  }
+}

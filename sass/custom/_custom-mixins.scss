@@ -71,3 +71,10 @@
   line-height: $line-height;
   border-radius: $border-radius;
 }
+
+
+
+// Box shadows
+@mixin drop-shadow-std($color: rgba(0,0,0,0.19)) {
+  box-shadow: 1px 3px 8px 2px $color;
+}
