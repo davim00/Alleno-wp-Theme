@@ -1,0 +1,206 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$orange:                 rgba(255,91,53,1);
+$blue:                   rgb(91, 53, 255);
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 25%);
+$gray-dark:              lighten($gray-base, 40%);
+$gray:                   lighten($gray-base, 60%);
+$gray-light:             lighten($gray-base, 75%);
+$gray-lighter:           lighten($gray-base, 90%);
+
+$brand-primary:         $orange;
+
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #fff;
+//** Global text color on `<body>`.
+$text-color:            $gray-dark;
+
+//** Global textual link color.
+$link-color:            $blue;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      desaturate(lighten($link-color, 15%), 30%);
+//** Link hover decoration.
+$link-hover-decoration: none;
+
+//** Headings link color.
+$link-headings-color:  $orange;
+//** Headings link hover color.
+$link-headings-hover-color: desaturate(lighten($link-headings-color, 15%), 30%);
+
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:      'Lato', Optima, Helvetica, Arial, sans-serif;
+$font-family-secondary-sans:  'BenchNine', Optima, Helvetica, Arial, sans-serif;
+
+$font-family-base:            $font-family-sans-serif;
+$font-family-header-base:     $font-family-secondary-sans;
+
+$font-size-base:              16px;
+$font-size-large:             ceil(($font-size-base * 1.25));
+$font-size-small:             ceil(($font-size-base * 0.7));
+
+$font-size-h1:                ceil(($font-size-base * 3));
+$font-size-h2:                floor(($font-size-base * 2.63));
+$font-size-h3:                floor(($font-size-base * 2));
+$font-size-h4:                floor(($font-size-base * 1.6));
+$font-size-h5:                floor(($font-size-base * 1.3));
+$font-size-h6:                ceil(($font-size-base));
+
+$h1-vertical-spacing:         ceil(($font-size-h1 * 2));
+$h1-bottom-spacing:           ceil(($h1-vertical-spacing / 8));
+$h1-top-spacing:              floor(($h1-vertical-spacing / 2.71) + $line-height-computed);
+$h2-vertical-spacing:         ceil(($font-size-h2 * 2));
+$h2-bottom-spacing:           ceil(($h2-vertical-spacing / 8));
+$h2-top-spacing:              floor(($h2-vertical-spacing / 2.71) + $line-height-computed);
+$h3-vertical-spacing:         ceil(($font-size-h3 * 2));
+$h3-bottom-spacing:           ceil(($h3-vertical-spacing / 8));
+$h3-top-spacing:              floor(($h3-vertical-spacing / 2.71) + ($line-height-computed / 2));
+$h4-vertical-spacing:         ceil(($font-size-h4 * 2));
+$h4-bottom-spacing:           ceil(($h4-vertical-spacing / 8));
+$h4-top-spacing:              floor(($h4-vertical-spacing / 2.71) + ($line-height-computed / 2));
+$h5-vertical-spacing:         ceil(($font-size-h5 * 2));
+$h5-bottom-spacing:           ceil(($h5-vertical-spacing / 8));
+$h5-top-spacing:              floor(($h5-vertical-spacing / 2.71) + ($line-height-computed / 2));
+$h6-vertical-spacing:         ceil(($font-size-h6 * 2));
+$h6-bottom-spacing:           ceil(($h6-vertical-spacing / 8));
+$h6-top-spacing:              floor(($h6-vertical-spacing / 2.71) + ($line-height-computed / 2));
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:            1.5;
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:        floor(($font-size-base * $line-height-base));
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:        $font-family-header-base;
+$headings-font-weight:        bold;
+$headings-line-height:        1;
+$headings-color:              $orange;
+
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical:     10px;
+$padding-base-horizontal:   16px;
+
+$padding-large-vertical:    14px;
+$padding-large-horizontal:  20px;
+
+$padding-small-vertical:    6px;
+$padding-small-horizontal:  12px;
+
+$padding-xs-vertical:       3px;
+$padding-xs-horizontal:     6px;
+
+$line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
+$line-height-small:         1.5;
+
+$border-radius-base:        2px;
+$border-radius-large:       2px;
+$border-radius-small:       1px;
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #fff;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       $brand-primary;
+
+//** Width of the `border` for generating carets that indicate dropdowns.
+$caret-width-base:          4px;
+//** Carets increase slightly in size for larger components.
+$caret-width-large:         5px;
+
+
+
+//== Buttons
+//
+//## For each button, define text, background and border color.
+
+$btn-font-weight:                normal;
+
+$btn-default-color:              $text-color;
+$btn-default-bg:                 $gray-light;
+$btn-default-border:             $btn-default-bg;
+
+$btn-standard-color:              #fff;
+$btn-standard-bg:                 $brand-primary;
+$btn-standard-border:             $btn-standard-bg;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base:         $border-radius-base;
+$btn-border-radius-large:        $border-radius-large;
+$btn-border-radius-small:        $border-radius-small;
+
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         48px;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width);
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet;
+
+// Medium screen / desktop
+$container-desktop:            (940px + $grid-gutter-width);
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1140px + $grid-gutter-width);
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$color__background-screen: #f1f1f1;
+$color__text-screen: #21759b;

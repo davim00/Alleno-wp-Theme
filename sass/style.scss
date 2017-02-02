@@ -1,0 +1,98 @@
+/*!
+Theme Name: Alleno
+Theme URI: http://underscores.me/
+Author: Matt Davis
+Author URI: http://www.salmo150.com
+Description: A simple portfolio and resume theme for graphic designers.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: alleno-cv
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Alleno is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+
+/*--------------------------------------------------------------
+# Variables & mixins
+--------------------------------------------------------------*/
+@import "bootstrap/variables";
+@import "custom/custom-variables";
+@import "bootstrap/mixins";
+@import "custom/custom-mixins";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "bootstrap/normalize";
+
+/*--------------------------------------------------------------
+# Print
+--------------------------------------------------------------*/
+@import "bootstrap/print";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "bootstrap/type";
+@import "custom/custom-type";
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "bootstrap/scaffolding";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "bootstrap/forms";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pagination";
+@import "bootstrap/pager";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "custom/custom-accessibility";
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "bootstrap/media";
+@import "bootstrap/responsive-embed";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "bootstrap/component-animations";
+@import "bootstrap/dropdowns";
+@import "bootstrap/jumbotron";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "custom/custom-elements";
