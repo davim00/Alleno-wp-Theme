@@ -51,6 +51,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "bootstrap/scaffolding";
 @import "bootstrap/code";
 @import "bootstrap/grid";
+@import "custom/custom-layout";
 
 /*--------------------------------------------------------------
 # Forms
@@ -67,6 +68,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "bootstrap/breadcrumbs";
 @import "bootstrap/pagination";
 @import "bootstrap/pager";
+@import "custom/custom-navs";
 
 /*--------------------------------------------------------------
 # Accessibility
