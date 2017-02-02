@@ -36,6 +36,29 @@ function alleno_cv_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
+	 * Enable support for custom logo.
+	 */
+		add_theme_support( 'custom-logo', array(
+			'height'      => 216,
+			'width'       => 350,
+			'flex-width'  => true,
+		) );
+
+		function alleno_cv_custom_logo() {
+			// Try to retrieve the Custom Logo
+			$output = '';
+			if (function_exists('get_custom_logo'))
+					$output = get_custom_logo();
+
+			// Nothing in the output: Custom Logo is not supported, or there is no selected logo
+			// In both cases we display the site's name
+			if (empty($output))
+					$output = '<h1 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'name' ) . '</a></h1>';
+
+			echo $output;
+			}
+
+	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
@@ -44,8 +67,17 @@ function alleno_cv_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'alleno-cv' ),
+		'primary' => esc_html__( 'Primary Nav', 'alleno-cv' ),
 	) );
+
+	// Apply "active" class to current menu item
+	function alleno_cv_nav_active ($classes, $item) {
+    if (in_array('current-menu-item', $classes) ){
+        $classes[] = 'active ';
+    }
+    return $classes;
+	}
+	add_filter('nav_menu_css_class' , 'alleno_cv_nav_active' , 10 , 2);
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -79,7 +111,7 @@ add_action( 'after_setup_theme', 'alleno_cv_setup' );
  * @global int $content_width
  */
 function alleno_cv_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'alleno_cv_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'alleno_cv_content_width', 903 );
 }
 add_action( 'after_setup_theme', 'alleno_cv_content_width', 0 );
 
