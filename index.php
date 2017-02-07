@@ -26,7 +26,7 @@ get_header(); ?>
 
 							if ( is_home() && ! is_front_page() ) : ?>
 								<header>
-									<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+									<h2 class="page-title screen-reader-text"><?php single_post_title(); ?></h2>
 								</header>
 
 							<?php
@@ -44,7 +44,14 @@ get_header(); ?>
 
 							endwhile;
 
-							the_posts_navigation();
+
+
+							the_posts_pagination( array(
+								'mid_size'  => 2,
+								'prev_text' => '&larr;&nbsp;&nbsp;Previous<span class="screen-reader-text">' . __( 'Previous page', 'alleno_cv' ) . '</span>',
+								'next_text' => 'Next&nbsp;&nbsp;&rarr;<span class="screen-reader-text">' . __( 'Next page', 'alleno_cv' ) . '</span>',
+								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'alleno_cv' ) . ' </span>',
+							) );
 
 						else :
 
