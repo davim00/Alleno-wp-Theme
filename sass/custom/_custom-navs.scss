@@ -67,6 +67,17 @@
     }
   }
 
+  // Main Navigation
+  // --------------------------------------------------
+
+  .main-navigation {
+    margin-bottom: (($grid-gutter-width / 2));
+
+    @media (min-width: $grid-float-breakpoint) {
+      margin-bottom: $grid-gutter-width;
+    }
+  }
+
 
   // Pills
   // -------------------------
@@ -165,6 +176,183 @@
       > .active > a:hover,
       > .active > a:focus {
         border-bottom-color: $nav-tabs-justified-active-link-border-color;
+      }
+    }
+  }
+
+  // Pagination
+  .pagination {
+    margin: 0 0 $grid-gutter-width;
+
+    .nav-links {
+      display: block;
+      text-align: center;
+      padding-left: 0;
+      margin: $line-height-computed 0;
+      border-radius: $border-radius-base;
+      position: relative;
+
+      .page-numbers {
+        display: inline-block;
+        padding: $padding-small-vertical $padding-small-horizontal;
+        font-family: $font-family-header-base;
+        font-weight: bold;
+        line-height: $line-height-base;
+        text-decoration: none;
+        color: $pagination-color;
+        background-color: $pagination-bg;
+        border: 1px solid $pagination-border;
+        border-radius: $border-radius-base;
+        margin-left: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+
+        &.prev {
+          background-color: transparent;
+          position: absolute;
+          left: 0;
+          border-radius: 30px;
+          min-width: 150px;
+          margin: 0;
+
+          &:hover,
+          &:focus {
+            background-color: #fff;
+            color: $orange;
+            border-color: $orange;
+          }
+        }
+        &.next {
+          position: absolute;
+          right: 0;
+          border-radius: 30px;
+          min-width: 126px;
+          margin: 0;
+
+          &:hover,
+          &:focus {
+            background-color: #fff;
+            color: $orange;
+            border-color: $orange;
+          }
+        }
+        &.current {
+          background-color: $pagination-border;
+        }
+
+        @media (max-width: $grid-float-breakpoint-max) {
+          display: none;
+
+          &.prev {
+            display: block;
+            position: static;
+            margin-bottom: 16px;
+          }
+          &.next {
+            display: block;
+            position: static;
+          }
+        }
+      }
+
+      a {
+        &:hover,
+        &:focus {
+          background-color: $orange;
+          color: #fff;
+          border-color: $orange;
+        }
+      }
+    }
+  }
+
+  .post-navigation {
+    margin: 0 0 (($grid-gutter-width / 2));
+
+    @media (min-width: $grid-float-breakpoint) {
+      margin: 0 0 $grid-gutter-width;
+    }
+
+    .nav-links {
+      display: block;
+      margin: $line-height-computed 0;
+      border-radius: $border-radius-base;
+
+      @media (min-width: $grid-float-breakpoint) {
+        position: relative;
+        height: 38px;
+      }
+    }
+
+    .nav-previous,
+    .nav-next {
+      display: block;
+      text-align: center;
+      margin-bottom: 16px;
+
+      @media (min-width: $grid-float-breakpoint) {
+        display: inline-block;
+        position: absolute;
+        text-align: left;
+      }
+
+
+      a {
+        display: inline-block;
+        padding: $padding-small-vertical $padding-small-horizontal;
+        font-family: $font-family-header-base;
+        font-weight: bold;
+        line-height: $line-height-base;
+        text-decoration: none;
+        color: $pagination-color;
+        background-color: $pagination-bg;
+        border: 1px solid $pagination-border;
+        border-radius: 30px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        width: 100%;
+
+        &:hover,
+        &:focus {
+          background-color: #fff;
+          color: $orange;
+          border-color: $orange;
+        }
+      }
+    }
+
+    .nav-previous {
+      left: 0;
+    }
+
+    .nav-next {
+      right: 0;
+    }
+  }
+
+  .page-links {
+  	clear: both;
+  	margin: 0 0 $line-height-computed;
+
+    span {
+
+    }
+
+    a {
+      display: inline-block;
+      font-family: $font-family-secondary-sans;
+      font-weight: bold;
+      color: $gray;
+      border: 1px solid $gray-light;
+      border-radius: $border-radius-small;
+      padding: $padding-small-vertical $padding-small-horizontal;
+      margin-left: 6px;
+
+      &:hover,
+      &:focus {
+        background-color: $orange;
+        border-color: $orange;
+        color: #fff;
       }
     }
   }

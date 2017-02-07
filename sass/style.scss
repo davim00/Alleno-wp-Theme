@@ -46,14 +46,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "custom/custom-type";
 
 /*--------------------------------------------------------------
-# Layout
---------------------------------------------------------------*/
-@import "bootstrap/scaffolding";
-@import "bootstrap/code";
-@import "bootstrap/grid";
-@import "custom/custom-layout";
-
-/*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
 @import "bootstrap/forms";
@@ -61,12 +53,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "bootstrap/input-groups";
 
 /*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "bootstrap/scaffolding";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "custom/custom-layout";
+@import "custom/custom-posts";
+@import "custom/custom-comments";
+@import "custom/custom-gallery";
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 @import "bootstrap/navs";
 @import "bootstrap/navbar";
 @import "bootstrap/breadcrumbs";
-@import "bootstrap/pagination";
 @import "bootstrap/pager";
 @import "custom/custom-navs";
 

@@ -34,6 +34,18 @@ img,
   height: auto;
 }
 
+// Style image captions
+.wp-caption {
+  margin-bottom: (($line-height-computed / 2));
+
+  .wp-caption-text {
+    letter-spacing: 0.03em;
+    font-size: floor(($font-size-base * 0.75));
+    color: $gray;
+    margin: (($line-height-computed / 3)) 0 0;
+  }
+}
+
 // Widgets
 .widget {
 	margin: 0 0 1.5em;
@@ -53,51 +65,7 @@ img,
 	display: block;
 }
 
-// Posts & pages
-.sticky {
-	display: block;
-  padding-bottom: $grid-gutter-width;
-  position: relative;
 
-  h2, .h2 {
-    font-size: ceil($font-size-h2 * 1.15);
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    height: 2px;
-    left: 240px;
-    right: 240px;
-    bottom: 0;
-    background-color: lighten($orange, 25%);
-  }
-}
-
-.hentry {
-	margin: 0 0 $grid-gutter-width 0;
-}
-
-.byline,
-.updated:not(.published){
-	display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-	display: inline;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
-}
 
 // Infinate scroll
 /* Globally hidden elements when Infinite Scroll is supported and in use. */

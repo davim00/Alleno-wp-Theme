@@ -110,6 +110,14 @@ h4, .h4 { font-size: $font-size-h4; }
 h5, .h5 { font-size: $font-size-h5; }
 h6, .h6 { font-size: $font-size-h6; }
 
+@media (max-width: $grid-float-breakpoint-max) {
+  h1, .h1 { font-size: floor(($font-size-h1 * 0.8)) }
+  h2, .h2 { font-size: floor(($font-size-h2 * 0.75)) }
+  h3, .h3 { font-size: floor(($font-size-h3 * 0.85)) }
+  h4, .h4 { font-size: floor(($font-size-h4 * 0.95)) }
+  h5, .h5 { font-size: floor(($font-size-h5 * 0.9)) }
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 
