@@ -143,7 +143,11 @@ function alleno_cv_scripts() {
 
 	wp_enqueue_style( 'alleno-cv-ostrich', 'https://fonts.googleapis.com/css?family=BenchNine:400,700', false );
 
+	wp_enqueue_style( 'alleno-cv-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', false );
+
 	wp_enqueue_script( 'alleno-cv-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+  wp_enqueue_script( 'alleno-cv-functions', get_template_directory_uri() . '/js/functions.js', array('jquery') );
 
 	wp_enqueue_script( 'alleno-cv-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

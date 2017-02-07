@@ -25,7 +25,7 @@ function alleno_cv_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( '%s', 'post date', 'alleno-cv' ),
+		esc_html_x( 'Posted on %s', 'post date', 'alleno-cv' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -49,58 +49,28 @@ function alleno_cv_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'alleno-cv' ) );
 		if ( $categories_list && alleno_cv_categorized_blog() ) {
-			printf( '<span class="cat-links"><span class="fa fa-folder"></span> ' . esc_html__( '%1$s', 'alleno-cv' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
-	}
-
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link"><span class="fa fa-comments"></span> ';
-		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'alleno-cv' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
-		echo '</span>';
-	}
-}
-endif;
-
-if ( ! function_exists( 'alleno_cv_single_footer' ) ) :
-/**
- * Prints HTML with meta information for the categories, tags and comments.
- */
-function alleno_cv_single_footer() {
-	// Hide category and tag text for pages.
-	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'alleno-cv' ) );
-		if ( $categories_list && alleno_cv_categorized_blog() ) {
-			printf( '<span class="cat-links"><span class="fa fa-folder"></span> ' . esc_html__( '%1$s', 'alleno-cv' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'alleno-cv' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'alleno-cv' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links"><span class="fa fa-hashtag"></span> ' . esc_html__( '%1$s', 'alleno-cv' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'alleno-cv' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link"><span class="fa fa-comments"></span> ';
+		echo '<span class="comments-link">';
 		/* translators: %s: post title */
 		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'alleno-cv' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
-}
-endif;
 
-if ( ! function_exists( 'alleno_cv_entry_edit' ) ) :
-/**
- * Adds a link to edit the entry.
- */
-function alleno_cv_entry_edit() {
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( '&#xf040; %s', 'alleno-cv' ),
-			the_title( '<span class="screen-reader-text">Edit "', '"</span>', false )
+			esc_html__( 'Edit %s', 'alleno-cv' ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',
 		'</span>'
