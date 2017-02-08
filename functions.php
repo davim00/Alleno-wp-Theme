@@ -122,13 +122,33 @@ add_action( 'after_setup_theme', 'alleno_cv_content_width', 0 );
  */
 function alleno_cv_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'alleno-cv' ),
-		'id'            => 'sidebar-1',
+		'name'          => esc_html__( 'Bottom Left', 'alleno-cv' ),
+		'id'            => 'bottom-1',
 		'description'   => esc_html__( 'Add widgets here.', 'alleno-cv' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Bottom Middle', 'alleno-cv' ),
+		'id'            => 'bottom-2',
+		'description'   => esc_html__( 'Add widgets here.', 'alleno-cv' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Bottom Right', 'alleno-cv' ),
+		'id'            => 'bottom-3',
+		'description'   => esc_html__( 'Add widgets here.', 'alleno-cv' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
 	) );
 }
 add_action( 'widgets_init', 'alleno_cv_widgets_init' );

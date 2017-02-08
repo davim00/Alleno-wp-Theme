@@ -30,8 +30,6 @@
 				<div class="site-branding">
 
 
-					<?php
-					if ( is_front_page() ) : ?>
 						<?php alleno_cv_custom_logo() ?>
 						<?php if (!has_custom_logo()) {
 							$description = get_bloginfo( 'description', 'display' );
@@ -40,10 +38,6 @@
 							<?php
 							endif;
 							} ?>
-					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-					endif; ?>
 				</div><!-- .site-branding -->
 
 
@@ -57,6 +51,6 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary', 'menu_class' => 'nav nav-pills alleno-nav' ) ); ?>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
-		</div>
+		</div><!-- .row -->
 
-		<div id="content" class="site-content">
+		<div id="content" class="row site-content">

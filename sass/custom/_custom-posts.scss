@@ -6,16 +6,21 @@
 // Basics of blogs and pages
 // --------------------------------------------------
 
-.post, .single {
+.post, .single, .page {
 
   h2.entry-title {
     display: inline-block;
   }
 
   .edit-link {
-    font-family: Fontawesome;
     font-size: floor(($font-size-h2 /2));
     margin-left: 16px;
+    position: relative;
+
+    .button {
+      position: absolute;
+      bottom: 2px;
+    }
   }
 }
 
@@ -177,5 +182,78 @@
 
   .entry-meta {
     margin: (($grid-gutter-width / 3)) 0;
+  }
+}
+
+
+// Image Post
+// --------------------------------------------------
+
+.attachment {
+
+  .nav-links {
+    margin: (($grid-gutter-width / 2)) 0;
+    @include clearfix();
+  }
+
+  #image-navigation .nav-next a {
+    float: right;
+    padding: $padding-small-vertical $padding-small-horizontal;
+    font-family: $font-family-header-base;
+    font-weight: bold;
+    line-height: $line-height-base;
+    text-decoration: none;
+    color: $pagination-color;
+    background-color: $pagination-bg;
+    border: 1px solid $pagination-border;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: $orange;
+      border-color: $orange;
+    }
+  }
+
+  #image-navigation .nav-previous a {
+    float: left;
+    padding: $padding-small-vertical $padding-small-horizontal;
+    font-family: $font-family-header-base;
+    font-weight: bold;
+    line-height: $line-height-base;
+    text-decoration: none;
+    color: $pagination-color;
+    background-color: $pagination-bg;
+    border: 1px solid $pagination-border;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: $orange;
+      border-color: $orange;
+    }
+  }
+
+  .entry-content {
+    margin: 0 0 (($grid-gutter-width / 3));
+
+    .attachment {
+      text-align: center;
+      margin-bottom: $line-height-computed;
+
+      a {
+        display: inline-block;
+      }
+    }
+
+    @media (min-width: $grid-float-breakpoint) {
+      margin: 0 0 $grid-gutter-width;
+    }
   }
 }

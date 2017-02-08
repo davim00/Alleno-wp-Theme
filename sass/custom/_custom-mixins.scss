@@ -24,22 +24,22 @@
   }
   &:hover {
     color: $color;
-    background-color: desaturate(lighten($background, 15%), 30%);
-        border-color: desaturate(lighten($border, 15%), 30%);
+    background-color: lighten($background, 10%);
+        border-color: lighten($border, 10%);
   }
   &:active,
   &.active,
   .open > &.dropdown-toggle {
     color: $color;
-    background-color: desaturate(lighten($background, 15%), 30%);
-        border-color: desaturate(lighten($border, 15%), 30%);
+    background-color: lighten($background, 10%);
+        border-color: lighten($border, 10%);
 
     &:hover,
     &:focus,
     &.focus {
       color: $color;
-      background-color: desaturate(lighten($background, 15%), 30%);
-          border-color: desaturate(lighten($border, 15%), 30%);
+      background-color: lighten($background, 10%);
+          border-color: lighten($border, 10%);
     }
   }
   &:active,

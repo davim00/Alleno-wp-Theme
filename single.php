@@ -9,10 +9,7 @@
 
 get_header(); ?>
 
-		<div class="row">
-
 			<div id="primary" class="col-sm-12 content-area">
-				<div class="row">
 					<main id="main" class="site-main" role="main">
 
 					<?php
@@ -34,9 +31,10 @@ get_header(); ?>
 					?>
 
 					</main><!-- #main -->
-				</div><!-- .row -->
 			</div><!-- #primary -->
-		</div><!-- .row -->
+
+		</div><!-- #content -->
+
 
 <?php
 get_sidebar();

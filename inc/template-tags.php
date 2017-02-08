@@ -99,7 +99,7 @@ function alleno_cv_entry_edit() {
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( '&#xf040; %s', 'alleno-cv' ),
+			esc_html__( 'Edit %s', 'alleno-cv' ),
 			the_title( '<span class="screen-reader-text">Edit "', '"</span>', false )
 		),
 		'<span class="edit-link">',

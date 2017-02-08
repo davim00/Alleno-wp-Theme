@@ -1,21 +1,23 @@
 .site {
   background-color: $gray-lighter;
-  padding-top: (($grid-gutter-width / 2));
-  padding-bottom: 0;
+  padding: (($grid-gutter-width / 2)) 0;
 
   @media (max-width: $grid-float-breakpoint-max) {
-    padding-top: 0;
+    padding: 0;
   }
 }
 
 .alleno-page {
-  padding: $grid-gutter-width;
   background-color: #fff;
   @include drop-shadow-std();
+}
 
-  @media (max-width: $grid-float-breakpoint-max) {
-    padding: (($grid-gutter-width / 2)) (($grid-gutter-width / 3)) (($grid-gutter-width / 3));
-  }
+.site-header {
+    padding: $grid-gutter-width;
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      padding: (($grid-gutter-width / 2)) (($grid-gutter-width / 3));
+    }
 }
 
 .site-branding {
@@ -42,9 +44,113 @@
   border-bottom: 1px solid $orange;
   padding: $padding-large-vertical 0;
   line-height: 1;
-  margin-bottom: $grid-gutter-width;
 
   ul.alleno-nav {
     display: inline-block;
+  }
+}
+
+.content-area {
+  padding: 0 $grid-gutter-width;
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    padding: 0 (($grid-gutter-width / 3));
+  }
+}
+
+.widget-area {
+  padding: $grid-gutter-width (($grid-gutter-width / 2));
+  color: $gray-light;
+  background-color: $gray-darker;
+  font-size: floor(($font-size-base * 0.9));
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 336px;
+    right: 336px;
+    bottom: -1px;
+    background-color: $gray-dark;
+    display: block;
+  }
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    margin: (($grid-gutter-width / 2)) 0;
+    padding-top: (($grid-gutter-width / 2));
+
+    &:before {
+      left: 32px;
+      right: 32px;
+    }
+  }
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    padding: 0 (($grid-gutter-width / 3));
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $gray-light;
+  }
+
+  a {
+    color: $gray-lighter;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 6px 0;
+      border-bottom: 1px solid $gray-dark;
+    }
+  }
+
+  .widget {
+    margin: 0 0 (($grid-gutter-width / 2));
+  }
+
+  .form-control {
+    background-color: $gray-dark;
+    border-color: $gray-darker;
+  }
+
+  #searchsubmit.button.button-default {
+    border-color: $gray-darker;
+  }
+}
+
+.site-footer {
+  padding: $grid-gutter-width (($grid-gutter-width / 2));
+  color: $gray-light;
+  background-color: $gray-darker;
+  font-size: floor(($font-size-base * 0.9));
+  text-align: center;
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    padding: 0 (($grid-gutter-width / 3));
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $gray-light;
+  }
+
+  a {
+    color: $gray-lighter;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
   }
 }

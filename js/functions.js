@@ -1,7 +1,8 @@
 // Bootstrap specific functions and styling
 jQuery(document).ready(function() {
-    jQuery('.comment-reply-link, .comment-edit-link').addClass('button button-sm button-default');
-    jQuery('#submit, button[type=submit], html input[type=button], input[type=reset], input[type=submit]').addClass('button button-standard');
+    jQuery('.comment-reply-link, .comment-edit-link, a.post-edit-link').addClass('button button-sm button-default');
+    jQuery('#submit, button[type=submit], html input[type=button], input[type=reset], input[type=submit]').addClass('button button-default');
+    jQuery('#commentform input[type=submit]').removeClass('button-default').addClass('button-standard');
     jQuery('.comment-form-comment').addClass('form-group');
     jQuery('.comment-form-comment > textarea').addClass('form-control');
 //    jQuery('.widget_rss ul').addClass('media-list');

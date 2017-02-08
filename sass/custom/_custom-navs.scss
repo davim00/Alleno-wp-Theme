@@ -67,17 +67,6 @@
     }
   }
 
-  // Main Navigation
-  // --------------------------------------------------
-
-  .main-navigation {
-    margin-bottom: (($grid-gutter-width / 2));
-
-    @media (min-width: $grid-float-breakpoint) {
-      margin-bottom: $grid-gutter-width;
-    }
-  }
-
 
   // Pills
   // -------------------------

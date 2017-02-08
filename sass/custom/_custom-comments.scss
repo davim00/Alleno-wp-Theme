@@ -33,7 +33,7 @@
 
   // Header
 
-  h2 {
+  h2.comments-title {
     margin: 0 0 (($grid-gutter-width / 2));
   }
 
@@ -115,6 +115,10 @@
               top: 0;
               margin-left: 0;
               display: block;
+            }
+
+            a {
+              position: static;
             }
           }
         }
