@@ -109,6 +109,9 @@ a {
   font-size: floor($font-size-base * 0.8);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
   padding: $padding-base-vertical $padding-base-horizontal;
   margin: 0;
   border: 1px solid $btn-default-border;

@@ -113,7 +113,7 @@ $padding-xs-vertical:       3px;
 $padding-xs-horizontal:     6px;
 
 $line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
-$line-height-small:         1.5;
+$line-height-small:         (($line-height-base * 0.8));
 
 $border-radius-base:        2px;
 $border-radius-large:       2px;
@@ -149,6 +149,15 @@ $btn-standard-border:             $btn-standard-bg;
 $btn-border-radius-base:         $border-radius-base;
 $btn-border-radius-large:        $border-radius-large;
 $btn-border-radius-small:        $border-radius-small;
+
+
+
+//** Default `.form-control` height
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2);
+//** Large `.form-control` height
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2);
+//** Small `.form-control` height
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2);
 
 
 
