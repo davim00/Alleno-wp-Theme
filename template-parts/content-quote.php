@@ -11,6 +11,8 @@
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php if ( is_single() ) : ?>
 	<header class="entry-header">
 
 			<?php the_title( '<h2 class="entry-title">', '</a></h2>' ); ?>
@@ -35,26 +37,28 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
+<?php endif; ?>
+
 	<div class="entry-content">
-		<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
-		<?php
-			the_content();
-
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'alleno-cv' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<?php if ( ! is_single() ) : ?>
+			<?php if ( get_edit_post_link() ) :
+						edit_post_link(
+							sprintf(
+								/* translators: %s: Name of current post */
+								esc_html__( 'Edit %s', 'alleno-cv' ),
+								the_title( '<span class="screen-reader-text">"', '"</span>', false )
+							),
+							'<span class="edit-link">',
+							'</span>'
+						);
+			endif; ?>
+		<?php endif; ?>
+		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
 	<?php
 	if ( ! is_single() ) : ?>
 		<a href="<?php echo get_permalink() ?>" class="button button-standard read-more"><?php esc_html_e( 'Read more', 'alleno-cv' ); ?></a>
-
-	<footer class="entry-footer">
-		<?php alleno_cv_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 
   <?php
 	else : ?>

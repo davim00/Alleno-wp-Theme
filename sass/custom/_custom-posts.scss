@@ -257,3 +257,59 @@
     }
   }
 }
+
+
+// Image Post Format
+// --------------------------------------------------
+
+.blog .post.format-image {
+
+  .entry-content {
+    position: relative;
+
+    .entry-header {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      display: block;
+      width: 100%;
+      padding: $line-height-computed $line-height-computed (($line-height-computed * 3));
+      color: $gray-light;
+      background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 30%,rgba(0,0,0,0) 100%);
+
+      .entry-title {
+        color: $gray-lighter;
+      }
+
+      .entry-meta {
+        color: $gray-light;
+
+        a {
+          color: $gray-light;
+
+          &:hover,
+          &:focus {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Blockquote Post Format
+// --------------------------------------------------
+
+.blog .post.format-quote {
+
+  .edit-link {
+    margin-left: 0;
+    z-index: 2;
+  }
+
+  .read-more {
+    position: relative;
+    z-index: 2;
+  }
+}
