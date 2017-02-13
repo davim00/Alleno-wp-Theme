@@ -16,7 +16,7 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'alleno-cv' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h4 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'alleno-cv' ), '<span>' . get_search_query() . '</span>' ); ?></h4>
 			</header><!-- .page-header -->
 
 			<?php
@@ -32,7 +32,12 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_pagination( array(
+				'mid_size'  => 2,
+				'prev_text' => '&larr;&nbsp;&nbsp;Previous<span class="screen-reader-text">' . __( 'Previous page', 'alleno_cv' ) . '</span>',
+				'next_text' => 'Next&nbsp;&nbsp;&rarr;<span class="screen-reader-text">' . __( 'Next page', 'alleno_cv' ) . '</span>',
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'alleno_cv' ) . ' </span>',
+			) );
 
 		else :
 

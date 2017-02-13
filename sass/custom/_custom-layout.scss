@@ -50,6 +50,10 @@
   }
 }
 
+.site-content {
+  margin-bottom: $grid-gutter-width;
+}
+
 .content-area {
   padding: 0 $grid-gutter-width;
 
@@ -152,5 +156,50 @@
     &:focus {
       color: #fff;
     }
+  }
+
+  .site-social-links {
+
+    .widget {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// Error page
+// --------------------------------------------
+
+.error-404 {
+
+  .page-header {
+    margin: 0 0 $h2-bottom-spacing 0;
+    padding: 0;
+    border: none;
+
+    .page-title {
+      margin: 0;
+    }
+  }
+}
+
+
+// Search results
+// --------------------------------------------
+
+.search-results, .archive {
+
+  .page-header {
+    margin: 0 0 (($grid-gutter-width / 2)) 0;
+    padding: 0;
+    border: none;
+
+    .page-title {
+      margin: 0;
+    }
+  }
+
+  article {
+    @include clearfix();
   }
 }

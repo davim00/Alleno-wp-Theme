@@ -2,6 +2,10 @@
 // Gallery
 // --------------------------------------------------
 
+.tag-jetpack-2 .gallery-item .gallery-caption {
+  padding-right: 0;
+}
+
 .gallery {
   margin-bottom:$line-height-computed;
   @include clearfix();

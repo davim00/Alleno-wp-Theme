@@ -10,6 +10,7 @@
 
   h2.entry-title {
     display: inline-block;
+    margin-top: 0;
   }
 
   .edit-link {
@@ -123,6 +124,14 @@
   .fa {
     margin-right: 3px;
   }
+}
+
+.more-link {
+  display: none;
+}
+
+.blog .page-links {
+  display: none;
 }
 
 
@@ -297,6 +306,28 @@
   }
 }
 
+// Gallery Format
+// --------------------------------------------------
+
+.blog .format-gallery {
+
+  figure.gallery-item {
+    display: none;
+
+    &:first-of-type,
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      display: inline-block;
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      &:nth-of-type(3) {
+        display: none;
+      }
+    }
+  }
+}
+
 
 // Blockquote Post Format
 // --------------------------------------------------
@@ -309,7 +340,64 @@
   }
 
   .read-more {
-    position: relative;
+    display: none;
+  }
+}
+
+// Status Post Format
+// --------------------------------------------------
+
+.blog .post.format-status {
+
+  .edit-link {
+    margin-left: 0;
     z-index: 2;
+  }
+
+  .entry-content {
+    font-size: $font-size-large;
+  }
+}
+
+// Aside Post Format
+// --------------------------------------------------
+
+.blog .post.format-aside {
+
+  .edit-link {
+    margin-left: 0;
+    z-index: 2;
+  }
+}
+
+// Link Post Format
+// --------------------------------------------------
+
+.blog .post.format-link {
+
+  .read-more, .entry-footer {
+    display: none;
+  }
+}
+
+
+// Archive
+// --------------------------------------------------
+
+.search-results, .archive {
+
+  .post,
+  .page {
+    margin: 0 0 (($grid-gutter-width / 2));
+
+    @media (min-width: $grid-float-breakpoint) {
+      margin: 0 0 $grid-gutter-width;
+    }
+  }
+
+  .page-content,
+  .entry-content,
+  .entry-summary {
+    margin: $line-height-computed 0;
   }
 }

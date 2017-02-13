@@ -77,9 +77,13 @@ h6, .h6 {
   margin-bottom: $h6-bottom-spacing;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  &:first-of-type {
-    margin-top: 0;
+.entry-content {
+
+>  h1, > h2,  > h3, > h4, > h5, > h6 {
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -171,4 +175,18 @@ blockquote {
   footer {
     text-align: right;
   }
+}
+
+// Definition Lists
+// -------------------------
+
+dd {
+  margin-bottom: $line-height-computed;
+}
+
+// Keyboard Tag
+// -------------------------
+
+kbd {
+  box-shadow: none !important;
 }

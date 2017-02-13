@@ -150,6 +150,16 @@ function alleno_cv_widgets_init() {
 		'before_title'  => '<h5 class="widget-title">',
 		'after_title'   => '</h5>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Top', 'alleno-cv' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add widgets here.', 'alleno-cv' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
 }
 add_action( 'widgets_init', 'alleno_cv_widgets_init' );
 
