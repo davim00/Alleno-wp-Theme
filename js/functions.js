@@ -5,9 +5,10 @@ jQuery(document).ready(function() {
     jQuery('#commentform input[type=submit]').removeClass('button-default').addClass('button-standard');
     jQuery('.comment-form-comment').addClass('form-group');
     jQuery('.comment-form-comment > textarea').addClass('form-control');
+    jQuery('input[type=submit].wpcf7-submit').removeClass('button-default');
     jQuery('.widget_rss ul').addClass('media-list');
     jQuery('.postform').addClass('form-control');
     jQuery('table').addClass('table');
     jQuery('table#wp-calendar').addClass('table table-striped');
-    jQuery('#submit, .tagcloud, button[type=submit], .comment-reply-link, .widget_rss ul, .postform, table#wp-calendar').show("fast")
+    jQuery('#submit, .tagcloud, button[type=submit], .comment-reply-link, .widget_rss ul, .postform, table#wp-calendar').show("fast");
 });
