@@ -1,9 +1,9 @@
 /*!
 Theme Name: Alleno
-Theme URI: http://underscores.me/
+Theme URI: https://github.com/davim00/alleno-cv/
 Author: Matt Davis
-Author URI: http://www.salmo150.com
-Description: A simple portfolio and resume theme for graphic designers.
+Author URI: http://mattdavisdesign.com
+Description: A simple portfolio and resume theme.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,7 +11,6 @@ Text Domain: alleno-cv
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 
 Alleno is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
@@ -21,9 +20,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 
-/*--------------------------------------------------------------
-# Variables & mixins
---------------------------------------------------------------*/
 @import "bootstrap/variables";
 @import "custom/custom-variables";
 @import "bootstrap/mixins";
