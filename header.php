@@ -31,13 +31,13 @@
 
 
 						<?php alleno_cv_custom_logo() ?>
-						<?php if (!has_custom_logo()) {
-							$description = get_bloginfo( 'description', 'display' );
+						
+							<?php $description = get_bloginfo( 'description', 'display' );
 							if ( $description || is_customize_preview() ) : ?>
 								<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 							<?php
 							endif;
-							} ?>
+							 ?>
 				</div><!-- .site-branding -->
 
 
