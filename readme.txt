@@ -1,6 +1,6 @@
 === Alleno ===
 
-Contributors: automattic
+Contributors: davim00
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.0
@@ -9,11 +9,11 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Alleno, or underscores.
+A simple theme called Alleno.
 
 == Description ==
 
-Hi. I'm a starter theme called Alleno, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Alleno is a simple, clean and light blogging theme that is perfect for blank slate site creation. It was developed as a simple way to display the author's portfolio, resume and contact info.
 
 == Installation ==
 
@@ -36,3 +36,5 @@ Alleno includes support for Infinite Scroll in Jetpack.
 
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+* Uses Bootstrap 3 http://getbootstrap.com/, (C) 2011-2016 Twitter, Inc., [MIT](http://opensource.org/licenses/MIT)
+* Uses Fontawesome 4.7.0 http://fontawesome.io/, (C) Dave Gandy, [MIT](http://opensource.org/licenses/MIT)
