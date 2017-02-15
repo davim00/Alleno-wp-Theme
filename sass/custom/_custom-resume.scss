@@ -1,0 +1,25 @@
+.resume-entry {
+  margin-bottom: (($line-height-computed * 2));
+
+  h6 {
+    margin-top: 0;
+  }
+
+  .resume-employdate {
+    font-style: italic;
+
+    @media (min-width: $grid-float-breakpoint) {
+      text-align: right;
+    }
+  }
+
+  .small {
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.resume-entry.last {
+  margin-bottom: 0;
+}

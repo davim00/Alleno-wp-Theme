@@ -2543,6 +2543,9 @@ pre {
 .single .entry-meta {
   margin: 32px 0; }
 
+.page h2.entry-title {
+  display: none; }
+
 .attachment .nav-links {
   margin: 48px 0; }
   .attachment .nav-links:before, .attachment .nav-links:after {
@@ -2831,6 +2834,23 @@ pre {
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
   display: none; }
+
+.resume-entry {
+  margin-bottom: 48px; }
+  .resume-entry h6 {
+    margin-top: 0; }
+  .resume-entry .resume-employdate {
+    font-style: italic; }
+    @media (min-width: 768px) {
+      .resume-entry .resume-employdate {
+        text-align: right; } }
+  .resume-entry .small {
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: bold; }
+
+.resume-entry.last {
+  margin-bottom: 0; }
 
 /*--------------------------------------------------------------
 # Navigation
