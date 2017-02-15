@@ -41,8 +41,14 @@ h2, h3,
   }
 }
 
-h5, h6,
-.h5, .h6 {
+h5,
+.h5 {
+  font-weight: 300;
+  color: $text-color;
+}
+
+h6,
+.h6 {
   font-weight: 900;
   color: $text-color;
 }
