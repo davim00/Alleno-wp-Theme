@@ -183,3 +183,15 @@ a {
     }
   }
 }
+
+.jumbotron-home {
+  background-color: transparent;
+  border-radius: 0;
+  margin-bottom: $grid-gutter-width;
+  padding: 0;
+}
+
+.jumbotron-bottom {
+  margin-top: $grid-gutter-width;
+  margin-bottom: 0;
+}
