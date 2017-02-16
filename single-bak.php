@@ -34,7 +34,6 @@ get_header(); ?>
 			</div><!-- #primary -->
 
 		</div><!-- #content -->
-	</div><!-- .container -->
 
 
 <?php

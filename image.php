@@ -114,6 +114,7 @@
  			</div><!-- #primary -->
 
     </div><!-- #content -->
+  </div><!-- .container -->
 
 
  <?php

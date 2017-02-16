@@ -184,11 +184,40 @@ a {
   }
 }
 
-.jumbotron-home {
+// Jumbotron
+
+.jumbotron {
+  margin-bottom: $grid-gutter-width;
+
+  h2,
+  .h2 {
+    color: $jumbotron-heading-color;
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+
+    h2,
+    .h2 {
+      font-size: $jumbotron-heading-font-size;
+    }
+  }
+}
+
+.jumbotron-front {
   background-color: transparent;
   border-radius: 0;
-  margin-bottom: $grid-gutter-width;
-  padding: 0;
+  padding: (($grid-gutter-width * 4)) 0;
+  text-align: center;
+  background-image: url('images/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h2,
+  .h2 {
+    color: #fff;
+  }
 }
 
 .jumbotron-bottom {

@@ -1,5 +1,6 @@
 .site {
   background-color: $gray-lighter;
+  padding: (($grid-gutter-width / 2)) 0;
 
   @media (max-width: $grid-float-breakpoint-max) {
     padding: 0;
@@ -12,10 +13,10 @@
 }
 
 .site-header {
-    padding: $grid-gutter-width 0;
+    padding: $grid-gutter-width;
 
     @media (max-width: $grid-float-breakpoint-max) {
-      padding: (($grid-gutter-width / 2)) 0;
+      padding: (($grid-gutter-width / 2)) (($grid-gutter-width / 3));
     }
 }
 

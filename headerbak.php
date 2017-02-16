@@ -23,7 +23,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'alleno-cv' ); ?></a>
 
-	<div class="container">
+	<div class="container alleno-page">
 
 		<div class="row">
 			<header id="masthead" class="col-sm-12 site-header" role="banner">
@@ -31,7 +31,7 @@
 
 
 						<?php alleno_cv_custom_logo() ?>
-
+						
 							<?php $description = get_bloginfo( 'description', 'display' );
 							if ( $description || is_customize_preview() ) : ?>
 								<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
@@ -52,9 +52,5 @@
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 		</div><!-- .row -->
-	</div><!-- .container -->
 
-	<?php do_action( 'alleno_cv_hero_action' ); ?>
-
-	<div class="container">
-	  <div id="content" class="row site-content">
+		<div id="content" class="row site-content">
