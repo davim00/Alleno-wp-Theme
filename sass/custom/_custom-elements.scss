@@ -34,6 +34,12 @@ img,
   height: auto;
 }
 
+// Make featured image have 0 margin
+img.wp-post-image {
+  margin-left: -(($grid-gutter-width));
+  margin-right: -(($grid-gutter-width));
+}
+
 // Style image captions
 .wp-caption {
   margin-bottom: (($line-height-computed / 2));
@@ -223,4 +229,12 @@ a {
 .jumbotron-bottom {
   margin-top: $grid-gutter-width;
   margin-bottom: 0;
+}
+
+
+// Make block element size out of margin
+
+.no-margin {
+  margin-left: -(($grid-gutter-width));
+  margin-right: -(($grid-gutter-width));
 }

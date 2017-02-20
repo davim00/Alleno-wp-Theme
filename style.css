@@ -4979,6 +4979,10 @@ img,
   max-width: 100%;
   height: auto; }
 
+img.wp-post-image {
+  margin-left: -48px;
+  margin-right: -48px; }
+
 .wp-caption {
   margin-bottom: 12px; }
   .wp-caption .wp-caption-text {
@@ -5187,5 +5191,9 @@ a {
 .jumbotron-bottom {
   margin-top: 48px;
   margin-bottom: 0; }
+
+.no-margin {
+  margin-left: -48px;
+  margin-right: -48px; }
 
 /*# sourceMappingURL=style.css.map */
