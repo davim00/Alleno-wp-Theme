@@ -2841,23 +2841,6 @@ pre {
 .gallery-columns-9 .gallery-caption {
   display: none; }
 
-.resume-entry {
-  margin-bottom: 48px; }
-  .resume-entry h6 {
-    margin-top: 0; }
-  .resume-entry .resume-employdate {
-    font-style: italic; }
-    @media (min-width: 768px) {
-      .resume-entry .resume-employdate {
-        text-align: right; } }
-  .resume-entry .small {
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    font-weight: bold; }
-
-.resume-entry.last {
-  margin-bottom: 0; }
-
 .panel {
   margin-bottom: 24px;
   background-color: #fff;
@@ -5176,24 +5159,78 @@ a {
       font-size: 72px; } }
 
 .jumbotron-front {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 192px 0;
   text-align: center;
-  background-image: url("images/hero.jpg");
-  background-repeat: no-repeat;
+  padding: 192px 0;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center; }
-  .jumbotron-front h2,
-  .jumbotron-front .h2 {
-    color: #fff; }
-
-.jumbotron-bottom {
-  margin-top: 48px;
-  margin-bottom: 0; }
 
 .no-margin {
   margin-left: -48px;
   margin-right: -48px; }
+
+.inverse {
+  background-color: #404040;
+  color: #a6a6a6;
+  border-color: #404040; }
+  .inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse h6,
+  .inverse .h1, .inverse .h2, .inverse .h3, .inverse .h4, .inverse .h5, .inverse .h6 {
+    color: #a6a6a6; }
+  .inverse a {
+    color: #f2f2f2; }
+    .inverse a:hover, .inverse a:focus {
+      color: white; }
+
+.resume-entry {
+  margin-bottom: 48px; }
+  .resume-entry h6 {
+    margin-top: 0; }
+  .resume-entry .resume-employdate {
+    font-style: italic; }
+    @media (min-width: 768px) {
+      .resume-entry .resume-employdate {
+        text-align: right; } }
+  .resume-entry .small {
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: bold; }
+
+.resume-entry.last {
+  margin-bottom: 0; }
+
+.front-intro p.lead {
+  margin: 48px 0; }
+
+.front-portfolio {
+  padding: 0;
+  position: relative; }
+  .front-portfolio img {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover; }
+  .front-portfolio .portfolio-link {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    padding-top: 138px;
+    padding-bottom: 138px;
+    text-align: center; }
+  @media (min-width: 768px) {
+    .front-portfolio img {
+      height: 500px; }
+    .front-portfolio .portfolio-link {
+      height: 500px;
+      padding-top: 238px;
+      padding-bottom: 138px; } }
+
+.jumbotron-bottom {
+  margin: 0;
+  background-color: transparent; }
 
 /*# sourceMappingURL=style.css.map */
