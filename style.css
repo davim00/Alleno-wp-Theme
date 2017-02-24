@@ -5162,8 +5162,7 @@ a {
   text-align: center;
   padding: 192px 0;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; }
+  background-repeat: no-repeat; }
 
 .no-margin {
   margin-left: -48px;

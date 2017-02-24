@@ -15,7 +15,7 @@
 
             <!-- Jumbotron -->
             <div class="hero">
-              <div class="jumbotron jumbotron-front" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(<?php echo get_template_directory_uri(); ?>/images/1039936_10151669959017171_1734813371_o.jpg)">
+              <div class="jumbotron jumbotron-front" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(<?php echo get_template_directory_uri(); ?>/images/hero.jpg); background-position: left;">
                 <div class="container">
                   <h2 style="color: #FFFFFF;">Great design should be accessible to everyone</h2>
                 </div><!-- .container -->
