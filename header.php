@@ -54,7 +54,7 @@
 		</div><!-- .row -->
 	</div><!-- .container -->
 
-	<?php do_action( 'alleno_cv_hero_action' ); ?>
+	<?php //do_action( 'alleno_cv_hero_action' ); ?>
 
 	<div class="container">
 	  <div id="content" class="row site-content">

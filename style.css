@@ -1608,9 +1608,6 @@ select[multiple].input-lg,
         position: static;
         margin: 3px 0 0; } }
 
-.wpcf7-form p {
-  margin: 0; }
-
 .wpcf7-form .wpcf7-submit {
   margin-top: 24px; }
 
@@ -2292,13 +2289,19 @@ pre {
 
 .alleno-page {
   background-color: #fff;
-  box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.19); }
+  box-shadow: 1px 3px 8px 2px rgba(0, 0, 0, 0.19);
+  padding: 48px; }
+  @media (max-width: 767px) {
+    .alleno-page {
+      padding: 16px; } }
 
 .site-header {
-  padding: 48px 0; }
+  padding-top: 48px;
+  padding-bottom: 48px; }
   @media (max-width: 767px) {
     .site-header {
-      padding: 24px 0; } }
+      padding-top: 24px;
+      padding-bottom: 24px; } }
 
 .site-branding {
   text-align: center;
@@ -2324,12 +2327,6 @@ pre {
 
 .site-content {
   margin-bottom: 48px; }
-
-.content-area {
-  padding: 48px; }
-  @media (max-width: 767px) {
-    .content-area {
-      padding: 16px; } }
 
 .widget-area {
   padding: 48px 24px;
@@ -5167,6 +5164,10 @@ a {
 .no-margin {
   margin-left: -48px;
   margin-right: -48px; }
+  @media (max-width: 767px) {
+    .no-margin {
+      margin-left: -16px;
+      margin-right: -16px; } }
 
 .inverse {
   background-color: #404040;
@@ -5199,6 +5200,9 @@ a {
 
 .front-intro p.lead {
   margin: 0 0 48px 0; }
+  @media (max-width: 767px) {
+    .front-intro p.lead {
+      margin: 0 0 16px 0; } }
 
 .front-portfolio {
   padding: 0;
@@ -5232,5 +5236,10 @@ a {
   margin: 0;
   padding: 48px 0 0;
   background-color: transparent; }
+  @media (max-width: 767px) {
+    .jumbotron-bottom {
+      padding: 15px 0 0; }
+      .jumbotron-bottom p.lead {
+        font-size: 18px; } }
 
 /*# sourceMappingURL=style.css.map */

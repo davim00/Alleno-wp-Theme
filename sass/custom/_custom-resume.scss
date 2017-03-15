@@ -31,6 +31,10 @@
 
   p.lead {
     margin: 0 0 $grid-gutter-width 0;
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      margin: 0 0 (($grid-gutter-width / 3)) 0;
+    }
   }
 }
 
@@ -76,4 +80,12 @@
   margin: 0;
   padding: $grid-gutter-width 0 0;
   background-color: transparent;
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    padding: 15px 0 0;
+
+    p.lead {
+      font-size: ($font-size-base * 1.125);
+    }
+  }
 }

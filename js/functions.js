@@ -5,7 +5,7 @@ jQuery(document).ready(function() {
     jQuery('#commentform input[type=submit]').removeClass('button-default').addClass('button-standard');
     jQuery('.comment-form-comment').addClass('form-group');
     jQuery('.comment-form-comment > textarea').addClass('form-control');
-    jQuery('input[type=submit].wpcf7-submit').removeClass('button-default');
+    jQuery('input[type=submit].wpcf7-submit').removeClass('button-default').addClass('button-standard');
     jQuery('.widget_rss ul').addClass('media-list');
     jQuery('.postform').addClass('form-control');
     jQuery('table').addClass('table');

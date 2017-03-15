@@ -14,8 +14,8 @@
 
 get_header(); ?>
 
-		<div id="primary" class="col-sm-12 content-area alleno-page">
-			<main id="main" class="site-main" role="main">
+		<div id="primary" class="col-sm-12 content-area">
+			<main id="main" class="site-main alleno-page" role="main">
 
 				<?php
 				while ( have_posts() ) : the_post();

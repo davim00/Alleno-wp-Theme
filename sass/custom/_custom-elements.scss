@@ -223,6 +223,11 @@ a {
 .no-margin {
   margin-left: -(($grid-gutter-width));
   margin-right: -(($grid-gutter-width));
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    margin-left: -(($grid-gutter-width / 3));
+    margin-right: -(($grid-gutter-width / 3));
+  }
 }
 
 // Make rows & containers inverse
