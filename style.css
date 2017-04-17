@@ -2538,16 +2538,33 @@ pre {
     .single .post {
       margin: 0 0 48px; } }
   .single .post .wp-post-image {
-    margin: 0 auto 24px; }
-
-.single .entry-header h2 {
-  margin: 0; }
+    margin: 0 auto 24px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover; }
+    @media (min-width: 768px) {
+      .single .post .wp-post-image {
+        height: 400px; } }
 
 .single .entry-meta {
   margin: 16px 0; }
 
+.single .page-content,
+.single .entry-content,
+.single .entry-summary {
+  margin: 24px 0; }
+
 .page h2.entry-title {
   display: none; }
+
+.page .wp-post-image {
+  margin: 0 auto 24px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover; }
+  @media (min-width: 768px) {
+    .page .wp-post-image {
+      height: 400px; } }
 
 .attachment .nav-links {
   margin: 24px 0; }
@@ -2662,6 +2679,18 @@ pre {
     .search-results .page, .archive .post,
     .archive .page {
       margin: 0 0 48px; } }
+  .search-results .post .wp-post-image,
+  .search-results .page .wp-post-image, .archive .post .wp-post-image,
+  .archive .page .wp-post-image {
+    margin: 0 auto 24px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover; }
+    @media (min-width: 768px) {
+      .search-results .post .wp-post-image,
+      .search-results .page .wp-post-image, .archive .post .wp-post-image,
+      .archive .page .wp-post-image {
+        height: 400px; } }
 
 .search-results .page-content,
 .search-results .entry-content,
@@ -2669,6 +2698,11 @@ pre {
 .archive .entry-content,
 .archive .entry-summary {
   margin: 24px 0; }
+
+.back-to-portfolio {
+  display: block !important;
+  width: 176px;
+  margin: 0 auto !important; }
 
 .comments-area {
   margin: 48px 0;
@@ -2837,6 +2871,9 @@ pre {
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
   display: none; }
+
+.foogallery-container {
+  margin-top: 20px; }
 
 .panel {
   margin-bottom: 24px;
@@ -4960,8 +4997,7 @@ img,
   height: auto; }
 
 img.wp-post-image {
-  margin-left: -48px;
-  margin-right: -48px; }
+  margin-bottom: 24px; }
 
 .wp-caption {
   margin-bottom: 12px; }
