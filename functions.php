@@ -65,6 +65,23 @@ function alleno_cv_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	/*
+	 * Enable support for Post Formats.
+	 *
+	 * @link https://codex.wordpress.org/Post_Formats
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'gallery',
+		'link',
+		'image',
+		'quote',
+		'status',
+		'video',
+		'audio',
+		'chat'
+	) );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Nav', 'alleno-cv' ),
@@ -88,7 +105,7 @@ function alleno_cv_setup() {
 		'comment-form',
 		'comment-list',
 		'gallery',
-		'caption',
+		'caption'
 	) );
 
 	// Set up the WordPress core custom background feature.
