@@ -9,18 +9,22 @@
 
 get_header(); ?>
 
-			<div id="primary" class="col-sm-12 content-area">
-					<main id="main" class="site-main" role="main">
+<div id="primary" class="col-sm-12 content-area">
+	<main id="main" class="site-main alleno-page" role="main">
 
 					<?php
-					while ( have_posts() ) : the_post();
+					if ( in_category('portfolio')) {
+						include 'single-portfolio.php';
+					} else {
+						while ( have_posts() ) : the_post();
 
-						get_template_part( 'template-parts/content', get_post_format() );
+							get_template_part( 'template-parts/content', get_post_format() );
 
-						the_post_navigation( array(
-							'prev_text' => '&larr;&nbsp;&nbsp;%title',
-							'next_text' => '%title&nbsp;&nbsp;&rarr;',
-						) );
+							the_post_navigation( array(
+								'prev_text' => '&larr;&nbsp;&nbsp;%title',
+								'next_text' => '%title&nbsp;&nbsp;&rarr;',
+							) );
+
 
 						// If comments are open or we have at least one comment, load up the comment template.
 						if ( comments_open() || get_comments_number() ) :
@@ -28,6 +32,7 @@ get_header(); ?>
 						endif;
 
 					endwhile; // End of the loop.
+				};
 					?>
 
 					</main><!-- #main -->

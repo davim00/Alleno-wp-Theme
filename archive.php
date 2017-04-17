@@ -9,8 +9,8 @@
 
 get_header(); ?>
 
-		<div id="primary" class="col-sm-12 content-area">
-			<main id="main" class="site-main" role="main">
+<div id="primary" class="col-sm-12 content-area">
+	<main id="main" class="site-main alleno-page" role="main">
 
 			<?php
 			if ( have_posts() ) : ?>
