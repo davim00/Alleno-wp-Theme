@@ -33,7 +33,8 @@
 
   // Header
 
-  h2.comments-title {
+  h2.comments-title,
+  h3.comment-reply-title {
     margin: 0 0 (($grid-gutter-width / 2));
   }
 

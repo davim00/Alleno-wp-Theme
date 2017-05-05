@@ -2536,7 +2536,12 @@ pre {
   margin: 0 0 24px; }
   @media (min-width: 768px) {
     .single .post {
-      margin: 0 0 48px; } }
+      margin: 0 0 48px; }
+      .single .post:before, .single .post:after {
+        content: " ";
+        display: table; }
+      .single .post:after {
+        clear: both; } }
   .single .post .wp-post-image {
     margin: 0 auto 24px;
     width: 100%;
@@ -2723,7 +2728,8 @@ pre {
       .comments-area:before {
         left: 32px;
         right: 32px; } }
-  .comments-area h2.comments-title {
+  .comments-area h2.comments-title,
+  .comments-area h3.comment-reply-title {
     margin: 0 0 24px; }
   .comments-area .comment-list {
     padding: 0;

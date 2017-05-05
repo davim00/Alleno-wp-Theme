@@ -178,6 +178,7 @@
 
     @media (min-width: $grid-float-breakpoint) {
       margin: 0 0 $grid-gutter-width;
+      @include clearfix();
     }
 
     .wp-post-image {
