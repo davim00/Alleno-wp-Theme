@@ -12,8 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 	if ( ! is_front_page() ) :
-	$title = the_title( '', '', false );
-	if ( $title !== 'Portfolio' ) : ?>
+	$title = the_title( '', '', false ); ?>
 	<header class="entry-header">
 		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 		<?php if ( get_edit_post_link() ) :
@@ -28,8 +27,7 @@
 					);
 		endif; ?>
 	</header><!-- .entry-header -->
-<?php endif;
-endif; ?>
+<?php endif; ?>
 
 	<div class="entry-content">
 		<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
