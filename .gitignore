@@ -17,6 +17,12 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Git related files
+node_modules/
+
+# SASS generated cache
+.sass-cache
+
 # =========================
 # Operating System Files
 # =========================
