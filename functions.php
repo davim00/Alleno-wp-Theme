@@ -44,20 +44,6 @@ function alleno_cv_setup() {
 			'flex-width'  => true,
 		) );
 
-		function alleno_cv_custom_logo() {
-			// Try to retrieve the Custom Logo
-			$output = '';
-			if (function_exists('get_custom_logo'))
-					$output = get_custom_logo();
-
-			// Nothing in the output: Custom Logo is not supported, or there is no selected logo
-			// In both cases we display the site's name
-			if (empty($output))
-					$output = '<h1 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'name' ) . '</a></h1>';
-
-			echo $output;
-			}
-
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
@@ -82,10 +68,15 @@ function alleno_cv_setup() {
 		'chat'
 	) );
 
+	// Register Custom Navigation Walker
+	require_once('inc/wp-bootstrap-navwalker.php');
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Nav', 'alleno-cv' ),
 	) );
+
+
 
 	// Apply "active" class to current menu item
 	function alleno_cv_nav_active ($classes, $item) {
