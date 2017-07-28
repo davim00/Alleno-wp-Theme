@@ -20,10 +20,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 
-@import "bootstrap/variables";
-@import "custom/custom-variables";
+@import "theme/variables";
 @import "bootstrap/mixins";
-@import "custom/custom-mixins";
 
 /*--------------------------------------------------------------
 # Normalize
@@ -39,7 +37,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Typography
 --------------------------------------------------------------*/
 @import "bootstrap/type";
-@import "custom/custom-type";
 
 /*--------------------------------------------------------------
 # Forms
@@ -47,8 +44,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "bootstrap/forms";
 @import "bootstrap/button-groups";
 @import "bootstrap/input-groups";
-@import "custom/custom-forms";
-@import "custom/custom-contact-form";
+@import "theme/contact_form";
 
 /*--------------------------------------------------------------
 # Layout
@@ -56,30 +52,24 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "bootstrap/scaffolding";
 @import "bootstrap/code";
 @import "bootstrap/grid";
-@import "custom/custom-layout";
-@import "custom/custom-posts";
-@import "custom/custom-comments";
-@import "custom/custom-gallery";
 @import "bootstrap/panels";
 @import "bootstrap/thumbnails";
 @import "bootstrap/list-group";
-@import "custom/custom-panels";
+@import "bootstrap/panels";
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-@import "bootstrap/navs";
-@import "bootstrap/navbar";
+@import "theme/navs";
+@import "theme/navbar";
 @import "bootstrap/breadcrumbs";
 @import "bootstrap/pager";
-@import "custom/custom-navs";
 @import "bootstrap/tables";
-@import "custom/custom-tables";
 
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
-@import "custom/custom-accessibility";
+@import "theme/accessibility";
 
 /*--------------------------------------------------------------
 # Utilities
@@ -101,7 +91,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "bootstrap/jumbotron";
 
 /*--------------------------------------------------------------
-# Elements
+# Theme
 --------------------------------------------------------------*/
-@import "custom/custom-elements";
-@import "custom/custom-resume";
+@import "theme/elements";
+@import "theme/posts";
+@import "theme/comments";
+@import "theme/gallery";
+@import "theme/resume";
+@import "theme/widgets";
