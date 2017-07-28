@@ -29,8 +29,12 @@
 			<header id="masthead" class="col-sm-12 site-header" role="banner">
 				<div class="site-branding">
 
+					<?php if ( has_custom_logo() ) :
+						alleno_cv_the_custom_logo();
+					else: ?>
+						<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php endif; ?>
 
-						<?php alleno_cv_custom_logo() ?>
 
 							<?php $description = get_bloginfo( 'description', 'display' );
 							if ( $description || is_customize_preview() ) : ?>
@@ -41,15 +45,33 @@
 				</div><!-- .site-branding -->
 
 
+				<nav id="site-navigation" class="main-navigation navbar-center navbar navbar-default" role="navigation">
+				  <div class="container">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				    </div>
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<!--<ul class="nav nav-pills alleno-nav">
-					  <li role="presentation" class="active"><a href="#">Home</a></li>
-					  <li role="presentation"><a href="#">Profile</a></li>
-					  <li role="presentation"><a href="#">Messages</a></li>
-					</ul>-->
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary', 'menu_class' => 'nav nav-pills alleno-nav' ) ); ?>
-				</nav><!-- #site-navigation -->
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+						<?php
+						wp_nav_menu( array(
+                'menu'              => 'primary',
+                'theme_location'    => 'primary',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+                'container_id'      => 'navbar',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker())
+            );
+						?>
+				  </div><!-- /.container-fluid -->
+				</nav>
 			</header><!-- #masthead -->
 		</div><!-- .row -->
 	</div><!-- .container -->
