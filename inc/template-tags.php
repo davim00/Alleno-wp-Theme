@@ -177,3 +177,12 @@ add_action( 'save_post',     'alleno_cv_category_transient_flusher' );
 
 	 return $output;
  }
+
+ /**
+	* Display the site logo.
+	*/
+ function alleno_cv_the_custom_logo() {
+	if ( function_exists( 'the_custom_logo' ) ) {
+		 the_custom_logo();
+	 }
+ }
